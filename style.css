@@ -1,0 +1,126 @@
+body {
+    /* background-image: url(/images/hills.png), linear-gradient(180deg, rgb(254, 228, 141), rgb(250, 250, 251));
+    background-color: rgb(231, 188, 101); */
+    background-blend-mode: darken;
+    background-position: bottom, top;
+    background-attachment: fixed, fixed;
+    background-repeat: repeat-x, no-repeat;
+    background-size: 500px, 100%;
+    background-image: url(/images/hills.png), linear-gradient(180deg, white, magenta);
+    background-color: rgb(253, 217, 145);
+    
+}
+
+.main {
+    width: 75%;
+}
+
+.bigbox {
+    box-sizing: border-box;
+    height: 300px;
+    width: min(400px,100%);
+    margin: auto;
+    padding: 5px;
+
+    /* border: black solid 1px; */
+}
+.bigbox > .glassy{
+    height: 100%;
+}
+.smallbox{
+    width:100%;
+    margin: 0;
+
+}
+.glassy {
+    border-radius: 5px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    margin-top: 15px;
+}
+
+/* .flex-group {
+    width: min(750px, 100%);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+} */
+
+#grid1 {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    /* column-gap: 0; */
+    column-gap: 10px;
+    border:none;   
+}
+#grid2{
+    display: grid;
+    grid-template-columns: 60% 40%;  
+    column-gap: 10px;
+}
+.colspan2{
+    grid-column: 1 / span 2;
+
+}
+
+.searchbox {
+    background-color: rgba(255, 255, 255, 0.051);
+    border: black solid 1px;
+}
+
+.searchbox:focus {
+    background-color: rgba(255, 255, 255, 0.309);
+    border: black solid 1px;
+}
+
+.searchbox:active {
+    background-color: rgba(255, 255, 255, 0.309);
+    border: black solid 1px;
+}
+
+#iconDisplay img{
+    width: 50%;
+    height: 50%;
+
+}
+.container-sm{
+    max-width: 850px;
+    margin-top: 40px;
+}
+
+@media(max-width:850px) {
+    .container-sm{
+        margin-top: 10px;
+    }
+    /* .extra {
+        display: none;
+    } */
+    .main {
+        width: 80%;
+    }
+    .flex-group {
+        width: min(400px, 100%);
+    }
+    .bigbox {
+        width: min(400px, 100%);    
+    }
+}
+
+@media(max-width:500px) {
+    .extra {
+        display: none;
+    }
+    .flex-group {
+        width: min(400px, 100%);
+    }
+    .bigbox {
+        width: min(400px,100%);  
+        height: 300px;  
+    }
+    
+    .main {
+        width: 95%;
+    }
+}
