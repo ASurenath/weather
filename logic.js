@@ -52,7 +52,7 @@ function displayData(dataArray) {
     if(dataArray.dt<dataArray.sys.sunrise || dataArray.dt>dataArray.sys.sunset){
         dayNight.innerHTML=`
         body{
-            background-color:lightskyblue;
+            background-color: rgb(166, 159, 201);
         }
         `
     }

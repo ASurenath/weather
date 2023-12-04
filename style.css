@@ -6,8 +6,8 @@ body {
     background-attachment: fixed, fixed;
     background-repeat: repeat-x, no-repeat;
     background-size: 500px, 100%;
-    background-image: url(./images/hills.png), linear-gradient(180deg, white, magenta);
-    background-color: rgb(253, 217, 145);
+    background-image: url(./images/hills.png), linear-gradient(180deg, white, rgb(160, 75, 160));
+    background-color: rgb(238, 213, 163);
     
 }
 a{
