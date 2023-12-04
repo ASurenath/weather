@@ -18,7 +18,7 @@
 <body>
 
     <div class="main text-center mx-auto">
-        <h1 class="text-center fw-light my-3">Weather Now</h1>
+        <a href="./index.html"><h1 class="text-center fw-light my-3">Weather Now</h1></a>
         <form action="">
             <div class="input-group my-3 container-sm text-center mx-auto">
                 <button type="button" onclick="currentLocation()" class="btn btn-outline-dark">
@@ -44,22 +44,29 @@
                 <div class="" id="grid1">
                     <div class="glassy smallbox colspan2" id="grid2">
                         <div class="mt-4">
-                            <h1 class="fw-normal p-0"><i class="fa-solid fa-temperature-half"></i>: <span id="temp1">-</span></h1>
+                            <h1 class="fw-normal p-0"><i class="fa-solid fa-temperature-half"></i>: <span id="temp1"> - </span></h1>
                         </div>
                         <div>
-                            Feels like: <span id="tempfeel1">-</span> <br>
-                            Min: <span id="tempmin1">-</span> <br>
-                            Max: <span  id="tempmax1">-</span> 
+                            Feels like: <span id="tempfeel1"> - </span> <br>
+                            Min: <span id="tempmin1"> - </span> <br>
+                            Max: <span  id="tempmax1"> - </span> 
                         </div>
                     </div>
                     <div class="glassy smallbox p-2">
                         <h5 class="fw-normal">Humidity:</h5>
-                        <h5 class="fw-normal" id="humidity1"></h5>
+                        <h5 class="fw-normal" id="humidity1"> - </h5>
                     </div>
                     <div class="glassy smallbox p-2">
                         <h5 class="fw-normal" id="">Wind:</h5>
-                        <h5 class="fw-normal" id="wind1"></h5>
+                        <h5 class="fw-normal" id="wind1"> - </h5>
                     </div>
+                    <div class="glassy smallbox p-2 colspan2">
+                        <h6 class="fw-normal">
+                            Visibility: <span id="visib1"> &nbsp;- </span> &nbsp; &nbsp; &nbsp;
+                            Cloudiness: <span id="cloud1"> &nbsp;- </span>
+                        </h6>
+                    </div>
+
                 </div>
             </div>
         </div>

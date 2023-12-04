@@ -18,6 +18,7 @@ function currentLocation() {
     }
 }
 function displayData(dataArray) {
+    locationName=dataArray.name
     main = dataArray.weather[0].main
     icon = dataArray.weather[0].icon
     temp= Math.floor((dataArray.main.temp-273.15)*10)/10
@@ -28,7 +29,9 @@ function displayData(dataArray) {
     arrowSize=Math.floor(50*windSpeed/30)
     arrowAngle=dataArray.wind.deg
     humidity=dataArray.main.humidity
-    locationName=dataArray.name
+    clouds=dataArray.clouds.all
+    visibility=dataArray.visibility
+
 
 
     weatherDisplay.innerHTML=main
@@ -42,8 +45,10 @@ function displayData(dataArray) {
 
     humidity1.innerHTML=humidity+'%'
     wind1.innerHTML=`${windSpeed}km/h &nbsp <i class="fa-solid fa-arrow-down" style="font-size:${arrowSize}px;transform:rotate(${arrowAngle}deg)"></i>`
+    cloud1.innerHTML=clouds+'%'
+    visib1.innerHTML=visibility+'m'
 
-    console.log(dataArray.dt<dataArray.sys.sunrise || dataArray.dt>dataArray.sys.sunset);
+    // console.log(dataArray.dt<dataArray.sys.sunrise || dataArray.dt>dataArray.sys.sunset);
     if(dataArray.dt<dataArray.sys.sunrise || dataArray.dt>dataArray.sys.sunset){
         dayNight.innerHTML=`
         body{
